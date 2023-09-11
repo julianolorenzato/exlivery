@@ -6,7 +6,7 @@ defmodule Exlivery.MixProject do
       app: :exlivery,
       version: "0.1.0",
       elixir: "~> 1.15",
-      elixirc_paths: elixirc_paths(Mix.env),
+      elixirc_paths: elixirc_paths(Mix.env()),
       start_permanent: Mix.env() == :prod,
       deps: deps()
     ]
@@ -22,6 +22,7 @@ defmodule Exlivery.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
+      {:elixir_uuid, "~> 1.2"},
       {:decimal, "~> 2.0"},
       {:ex_machina, "~> 2.7.0"}
     ]
